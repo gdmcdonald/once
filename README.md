@@ -1,4 +1,4 @@
-# `once`  <img src="man/figures/once.png" width="300" align="right" style="margin:0px 50px" />
+# `once`  <img src="man/figures/logo.png" width="300" align="right" style="margin:0px 50px" />
 
 <!-- badges: start -->
 <img src="https://github.com/gdmcdonald/once/actions/workflows/r.yml/badge.svg" alt="badge">
