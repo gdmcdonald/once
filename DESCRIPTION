@@ -7,7 +7,6 @@ Authors@R:
 Description: The once package allows you to easily execute expensive compute operations only once, and save the resulting object to disk.
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports: 
