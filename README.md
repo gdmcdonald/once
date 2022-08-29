@@ -39,6 +39,6 @@ my_number <-
 
 ```{r}
 #install.packages("devtools")
-devtools::install_github(gdmcdonald/once)
+devtools::install_github("gdmcdonald/once")
 library(once)
 ```
