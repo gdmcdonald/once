@@ -12,7 +12,7 @@ Using `once()` you can wrap an expensive operation so that output is saved to di
 Eg. instead of 
 
 ```{r}
-file_path <- "saved_models/my_trained_models.Rds"
+file_path <- "saved_objects/saved_random_number.Rds"
 
 if (file.exists(file_path)){
 
@@ -35,7 +35,7 @@ it would look like
 my_number <-
   runif(1e8) %>% # some expensive operation
   mean() %>%
-  once(file_path = "saved_random_number.Rds") # only do it once, save output to this file.
+  once(file_path = "saved_objects/saved_random_number.Rds") # only do it once, save output to this file.
 ```
 
 ## Install instructions
