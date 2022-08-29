@@ -6,7 +6,8 @@
 
 An R package that makes it easy to execute expensive operations only once.
 
-Wrap an expensive operation so that output is saved to disk. If the file exists, it won't run again, it will just load the saved version. 
+
+Using `once()` you can wrap an expensive operation so that output is saved to disk. If the file exists, it won't run again, it will just load the saved version. 
 
 Eg. instead of 
 
@@ -43,4 +44,15 @@ my_number <-
 #install.packages("devtools")
 devtools::install_github("gdmcdonald/once")
 library(once)
+```
+## Further details
+
+You can also force it to run again, which will cause it to overwrite the saved object on disk:
+
+```{r}
+my_number <-
+  runif(1e8) %>% # some expensive operation
+  mean() %>%
+  once(file_path = "saved_random_number.Rds",
+  rerun = TRUE ) # rerun and overwrite the existing file
 ```
