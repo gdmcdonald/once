@@ -13,7 +13,8 @@
 #' my_out <-
 #'   runif(1e8) %>% # some expensive operation
 #'   mean() %>%
-#'   once(file_path = "saved_objects/saved_random_number.Rds") # only do it once, save output to this file.
+#'   once(file_path = "saved_objects/saved_random_number.Rds")
+#'   # only do it once, save output to this file.
 once <- function(expr,
                  file_path = NULL,
                  rerun = FALSE){
