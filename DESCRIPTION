@@ -13,7 +13,4 @@ RoxygenNote: 7.1.1
 Imports: 
     magrittr (>= 2.0.3),
     here (>= 1.0.1)
-Suggests: 
-    knitr,
-    rmarkdown
 URL: https://gdmcdonald.github.io/once/
