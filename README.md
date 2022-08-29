@@ -23,7 +23,8 @@ if (file.exists(file_path)){
   my_number <-
     runif(1e8) %>% # some expensive operation
     mean()
-  # or ML model training such as `my_trained_models <- train_models_function(...)`
+  # or ML model training such as 
+  # `my_trained_models <- train_models_function(...)`
   
   saveRDS(my_number, file = file_path)
 }
@@ -35,7 +36,8 @@ it would look like
 my_number <-
   runif(1e8) %>% # some expensive operation
   mean() %>%
-  once(file_path = "saved_objects/saved_random_number.Rds") # only do it once, save output to this file.
+  once(file_path = "saved_objects/saved_random_number.Rds") 
+  # only do it once, save output to this file.
 ```
 
 ## Install instructions
