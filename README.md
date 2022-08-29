@@ -34,3 +34,11 @@ my_number <-
   mean() %>%
   once(file_path = "saved_random_number.Rds") # only do it once, save output to this file.
 ```
+
+## Install instructions
+
+```{r}
+#install.packages("devtools")
+devtools::install_github(gdmcdonald/once)
+library(once)
+```
