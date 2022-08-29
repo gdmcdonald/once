@@ -1,5 +1,7 @@
 # `once`
 
+![badge](https://github.com/gdmcdonald/once/actions/workflows/r.yml/badge.svg)
+
 <img width="260" alt="once" src="https://user-images.githubusercontent.com/20785842/187124151-f16587c9-bc87-4deb-8c75-7943a2126f14.png">
 
 An R package that makes it easy to execute expensive operations only once.
