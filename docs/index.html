@@ -84,8 +84,8 @@
 <pre class="{r}"><code><span><span class="va">my_number</span> <span class="op">&lt;-</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html" class="external-link">runif</a></span><span class="op">(</span><span class="fl">1e8</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> <span class="co"># some expensive operation</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="reference/once.html">once</a></span><span class="op">(</span>file_path <span class="op">=</span> <span class="st">"saved_objects/saved_random_number.Rds"</span><span class="op">)</span> </span>
-<span>  <span class="co"># only do it once, save output to this file.</span></span></code></pre>
+<span>  <span class="fu"><a href="reference/once.html">once</a></span><span class="op">(</span>file_path <span class="op">=</span> <span class="st">"saved_objects/saved_random_number.Rds"</span><span class="op">)</span> </span></code></pre>
+<p>which will only execute the expensive operation the first time the code is run, and save this output to file.</p>
 <div class="section level2">
 <h2 id="install-instructions">Install instructions<a class="anchor" aria-label="anchor" href="#install-instructions"></a>
 </h2>
@@ -100,7 +100,7 @@
 <pre class="{r}"><code><span><span class="va">my_number</span> <span class="op">&lt;-</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html" class="external-link">runif</a></span><span class="op">(</span><span class="fl">1e8</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> <span class="co"># some expensive operation</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="reference/once.html">once</a></span><span class="op">(</span>file_path <span class="op">=</span> <span class="st">"saved_random_number.Rds"</span>,</span>
+<span>  <span class="fu"><a href="reference/once.html">once</a></span><span class="op">(</span>file_path <span class="op">=</span> <span class="st">"saved_objects/saved_random_number.Rds"</span>,</span>
 <span>  rerun <span class="op">=</span> <span class="cn">TRUE</span> <span class="op">)</span> <span class="co"># rerun and overwrite the existing file</span></span></code></pre>
 </div>
 </div>

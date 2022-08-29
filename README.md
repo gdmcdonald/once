@@ -37,8 +37,9 @@ my_number <-
   runif(1e8) %>% # some expensive operation
   mean() %>%
   once(file_path = "saved_objects/saved_random_number.Rds") 
-  # only do it once, save output to this file.
 ```
+which will only execute the expensive operation the first time the code is run, and save this output to file.
+
 
 ## Install instructions
 
@@ -55,6 +56,6 @@ You can also force it to run again, which will cause it to overwrite the saved o
 my_number <-
   runif(1e8) %>% # some expensive operation
   mean() %>%
-  once(file_path = "saved_random_number.Rds",
+  once(file_path = "saved_objects/saved_random_number.Rds",
   rerun = TRUE ) # rerun and overwrite the existing file
 ```
