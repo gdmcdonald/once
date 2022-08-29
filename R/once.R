@@ -10,10 +10,12 @@
 #' @export
 #'
 #' @examples
+#' save_file <- tempfile(fileext = ".Rds")
+#'  # temporary file path - replace with your preferred saved file path
 #' my_out <-
 #'   runif(1e8) %>% # some expensive operation
 #'   mean() %>%
-#'   once(file_path = "saved_objects/saved_random_number.Rds")
+#'   once(file_path = save_file)
 #'   # only do it once, save output to this file.
 once <- function(expr,
                  file_path = NULL,
