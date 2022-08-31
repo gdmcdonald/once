@@ -9,7 +9,7 @@ once(expr, file_path = NULL, rerun = FALSE)
 \arguments{
 \item{expr}{The expensive expression to evaluate}
 
-\item{file_path}{File path for saving the output object as an Rds file. Defaults to an auto-generated file in the 'saved_objects' folder in current project's directory. Note that if no filename is provided it will rerun and re-save every time!}
+\item{file_path}{File path for saving the output object as an Rds file. Note that if no file name is provided it will not save!}
 
 \item{rerun}{Rerun the expression anyway and save the result? Defaults to false.}
 }

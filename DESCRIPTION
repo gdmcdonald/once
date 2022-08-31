@@ -1,10 +1,10 @@
 Package: once
 Title: Execute Expensive Operations Only Once
-Version: 0.3
+Version: 0.4
 Authors@R: 
     person("Gordon", "McDonald", , "gordon.mcdonald@sydney.edu.au", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-2890-527X"))
-Description: The once package allows you to easily execute expensive compute operations only once, and save the resulting object to disk.
+Description: Allows you to easily execute expensive compute operations only once, and save the resulting object to disk.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

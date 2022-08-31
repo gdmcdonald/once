@@ -3,7 +3,7 @@
 #' The `once()` function allows you to easily execute expensive compute operations only once, and save the resulting object to disk.
 #'
 #' @param expr The expensive expression to evaluate
-#' @param file_path File path for saving the output object as an Rds file. Defaults to an auto-generated file in the 'saved_objects' folder in current project's directory. Note that if no filename is provided it will rerun and re-save every time!
+#' @param file_path File path for saving the output object as an Rds file. Note that if no file name is provided it will not save!
 #' @param rerun Rerun the expression anyway and save the result? Defaults to false.
 #'
 #' @return the results of expr
@@ -21,15 +21,20 @@ once <- function(expr,
                  file_path = NULL,
                  rerun = FALSE){
 
-  #if there's no file path, use the current datetime
+  #if there's no file path, don't save.
   if (is.null(file_path)) {
 
-    datetime_string <- as.character(format(Sys.time(),
-                                           "%Y_%m_%d_T_%H_%M_%S"))
-    file_path <- here::here("saved_objects",
-                            paste0("once_",
-                                   datetime_string,
-                                   ".Rds"))
+    # # Default file path behavior not allowed by CRAN.
+    # datetime_string <- as.character(format(Sys.time(),
+    #                                        "%Y_%m_%d_T_%H_%M_%S"))
+    # file_path <- here::here("saved_objects",
+    #                         paste0("once_",
+    #                                datetime_string,
+    #                                ".Rds"))
+
+    # So just return the expression without saving.
+    output <-
+      eval(expr = expr)
 
   }
 
