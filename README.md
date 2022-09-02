@@ -44,8 +44,7 @@ which will only execute the expensive operation the first time the code is run, 
 ## Install instructions
 
 ```{r}
-#install.packages("devtools")
-devtools::install_github("gdmcdonald/once")
+install.packages("once")
 library(once)
 ```
 ## Further details
